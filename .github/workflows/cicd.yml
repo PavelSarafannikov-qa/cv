@@ -26,11 +26,11 @@ jobs:
             https://github.com/${{ github.repository }}/actions/runs/${{github.run_id}}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Пройти проверки CSS линтера
-        uses: actions-hub/stylelint@master
-        env:
-          PATTERN: "**/*.css"
-      - uses: actions/checkout@v2
+#      - name: Пройти проверки CSS линтера
+#        uses: actions-hub/stylelint@master
+#        env:
+#          PATTERN: "**/*.css"
+#      - uses: actions/checkout@v2
       - name: Set up Python 3.10.5
         uses: actions/setup-python@v2
         with:

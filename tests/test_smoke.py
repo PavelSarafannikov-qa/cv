@@ -1,8 +1,8 @@
 """
 Базовые тесты
 """
-from tests.helper.base_app import BasePage
 from selenium.webdriver.common.by import By
+from tests.helper.base_app import BasePage
 
 
 def test_get_url(browser):
@@ -34,4 +34,5 @@ def test_accordion(browser):
     browser.find_element(By.XPATH, value='//*[@id="headingTwo"]/button').click()
     elements = browser.find_elements(by=By.CSS_SELECTOR, value="[id='collapseTwo'] a")
 
-    assert elements[-1].accessible_name == "Программа для выборки случайной музыки из коллекции", 'Неожиданная ссылка'
+    assert elements[-1].accessible_name == "Программа для выборки случайной музыки из коллекции",\
+        'Неожиданная ссылка'

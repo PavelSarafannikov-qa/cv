@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Запуск CSS линтера
+    name: Прогон автотестов
     runs-on: ubuntu-latest
     steps:
       - name: Send telegram message on push
@@ -41,9 +41,9 @@ jobs:
       - name: Install module
         run: |
           pip install -r requirements.txt
-#      - name: Analysing the code with pylint
-#        run: |
-#          pylint --rcfile=.pylintrc tests/
+      - name: Analysing the code with pylint
+        run: |
+          pylint --rcfile=.pylintrc tests/
       - name: Run test
         run: |
           python -m pytest -vv tests/test_smoke.py

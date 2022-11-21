@@ -1,19 +1,24 @@
-*, *::before, *::after {
+*, 
+*::before, 
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     position: relative;
     overflow: hidden;
     overflow-y: auto;
 }
+
 .wrapper {
     width: 500px;
     max-width: calc(100% - 30px);
     margin: 0 auto;
     padding-top: 15px;
 }
+
 h1 {
     margin-bottom: 30px;
     text-align: center;
@@ -22,15 +27,18 @@ h1 {
     word-wrap: break-word;
     color: hsl(var(--color), 40%, 80%);
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .item {
     width: calc(33.33% - 30px);
     margin: 10px;
 }
+
 .item__inner {
     position: relative;
     width: 100%;
@@ -41,6 +49,7 @@ h1 {
     object-fit: cover;
     border-radius: 20px 20px 20px 20px;
 }
+
 .item__cell {
     position: absolute;
     top: 0;
@@ -57,12 +66,15 @@ h1 {
     cursor: pointer;
     border-radius: 20px 20px 20px 20px;
 }
+
 .item__cell_selected {
     background-color: hsl(var(--color), 20%, 20%);
 }
+
 .item__cell:hover {
     background-color: hsl(var(--color), 20%, 20%);
 }
+
 h2 {
    margin-bottom: 10px;
    text-align: center;
